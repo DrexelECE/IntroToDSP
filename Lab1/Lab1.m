@@ -50,6 +50,7 @@ grid on;
 
 %% Task 3
 clear; clc;
+
 t = -2:0.001:4;
 
 f1 = 4 + 2*u(t+3) - r(t+1) + r(t-5);
@@ -66,4 +67,25 @@ title 'Plots of given functions';
 xlabel 't';
 ylabel 'f(t)';
 legend('f1(t)','f2(t)','f3(t)','f4(t)','f5(t)');
+
+%% Task 4
+clear; clc;
+
+resolution = .00001*pi;
+
+t = -10*pi:resolution:1*pi;
+
+x = sin(4*pi*t) + cos(6*pi*t);
+y = sin(pi*t/2) + sin(t);
+
+figure(4);
+plot(t, x, t, y);
+grid on;
+title 'Plots of x(t) and y(t)';
+xlabel 't';
+ylabel 'x(t) or y(t)';
+legend('x(t)','y(t)');
+
+% Do the writing-part of Task 4. 
+
 
