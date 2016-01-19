@@ -1,0 +1,112 @@
+clc
+clear all
+close all
+%% Task 1 
+% z = 3 + 4i; % in Matlab 'j' is usually written as 'i'.
+% theta = angle(z) % theta is the phase of z (in radian)
+% r = abs(z) % r is the amplitude
+x = 2+3i;
+y = 5*exp(-i*3/5);
+z = 3*exp(-4i/pi);
+u1 = x+y+z;
+theta = angle(u1); % theta is the phase of z (in radian)
+r1 = abs(u1); % r is the amplitude
+v1 = (conj(x)/abs(x))+y-conj(z);
+theta = angle(v1);
+r1 = abs(v1);
+
+%% Task 2
+x1 = -1:0.01:1;
+x2 = -1:0.2:1;
+plot(x1,u(x1),'r*')
+hold on
+plot(x2,u(x2),'b*')
+xlabel('x')
+ylabel('u(x)')
+title('u(x) for -1 to 1')
+grid on
+ylim([-0.5 1.5]) 
+
+figure
+x3 = -1:0.05:1;
+plot(x3,r(x3),'b')
+xlabel('x')
+ylabel('r(x)')
+title('r(x) for -1 to 1')
+grid on
+
+%% Task 3
+t = -2:0.05:4;
+f = r(t+1)-r(t)+u(t-1)-3*u(t-2)+r(t-2)-r(t-3);
+figure
+plot(t,f)
+grid on
+xlabel('t')
+ylabel('f(t)')
+title('Graph of f(t) where the range of t is from -2 to 4')
+
+
+f1 = 4+2*u(t+3)-r(t+1)+r(t-5);
+figure
+plot(t,f1)
+grid on
+xlabel('t')
+ylabel('f1(t)')
+title('Part A')
+f2 = u(t).*u(6-t);
+figure
+plot(t,f2)
+grid on
+xlabel('t')
+ylabel('f2(t)')
+title('Part B')
+f3 = u(t)-u(t-6); 
+figure
+plot(t,f3)
+grid on
+xlabel('t')
+ylabel('f3(t)')
+title('Part C')
+f4 = 2*sin(r(t));
+figure
+plot(t,f4)
+grid on
+xlabel('t')
+ylabel('f4(t)')
+title('Part D') 
+f5 = r(2*sin(t));
+figure 
+plot(t,f5)
+grid on
+xlabel('t')
+ylabel('f5(t)')
+title('Part E')
+
+
+%% Task 4 
+t = -1.5:0.05:1.5;
+x = sin(4*pi*t)+cos(6*pi*t);
+figure
+plot(t,x)
+grid on 
+xlabel('t')
+ylabel('x(t)') 
+title('Part A') 
+% Two data points which are measured at peaks of the figure, include x
+% values of -0.35 and 0.65. This, in addition to the initial peak at -1.35,
+% lead to the conclusion that x(t) is periodic, with a period of 1.
+
+t = -100:0.05:100;
+y = sin((pi*t)/2)+sin(t);
+figure 
+plot(t,y) 
+grid on
+xlabel('t') 
+ylabel('y(t)')
+title('Part B') 
+%Given a small percentage error from mouseclicks, y(t) appears to be
+%periodic with a period of approximately 44, as determined by measuring
+%peak amplitudes with around 44 point differences in their x-values. 
+
+type u.m
+type r.m
