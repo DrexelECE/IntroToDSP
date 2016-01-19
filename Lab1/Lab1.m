@@ -1,3 +1,6 @@
+%% Lab 1
+%  As ecaluated by James Kerr and James Kurtz
+
 %% Task 1
 clear; clc;
 
@@ -6,11 +9,11 @@ y = 5*exp(-1i*3/5);
 z = 3*exp(-4i/pi);
 
 u1 = x+y-z;
-printAmpPhase(u1);
+f_printAmpPhase(u1);
 
 v1 = conj(x)/abs(x)+y-conj(z);
 
-printAmpPhase(v1);
+f_printAmpPhase(v1);
 
 
 %% Task 2
@@ -86,6 +89,17 @@ xlabel 't';
 ylabel 'x(t) or y(t)';
 legend('x(t)','y(t)');
 
-% Do the writing-part of Task 4. 
+% TODO: Do the writing-part of Task 4. 
 
 
+%% Functions Used:
+
+type f_printAmpPhase;
+
+type f_amplitude;
+
+type f_phase;
+
+type u;
+
+type r;
