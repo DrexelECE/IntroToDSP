@@ -102,7 +102,7 @@ legend('x(t)','y(t)');
 %   signal is thus aperiodic. 
 
 
-%% Functions Used:
+%% Functions Used
 
 type f_printAmpPhase;
 
