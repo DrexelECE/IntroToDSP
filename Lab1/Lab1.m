@@ -1,5 +1,5 @@
 %% Lab 1
-%  As ecaluated by James Kerr and James Kurtz
+%  As evaluated by James Kerr and James Kurtz
 
 %% Task 1
 clear; clc;
