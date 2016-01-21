@@ -76,7 +76,7 @@ clear; clc;
 
 resolution = .00001*pi;
 
-t = -10*pi:resolution:1*pi;
+t = -30:resolution:30;
 
 x = sin(4*pi*t) + cos(6*pi*t);
 y = sin(pi*t/2) + sin(t);
