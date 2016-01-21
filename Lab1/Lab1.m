@@ -89,7 +89,17 @@ xlabel 't';
 ylabel 'x(t) or y(t)';
 legend('x(t)','y(t)');
 
-% TODO: Do the writing-part of Task 4. 
+% Discussion
+%   The period of the first function, x(t) = sin(4?t) + cos(6?t) appears to
+%   be 1.  This is confirmed mathematically, as the period of sin(4?t) is
+%   1/2 and the period of cos(6?t) is 1/3; together these two have a least
+%   common multiple (and thus, combined period) of 1. 
+%   
+%   The period of the second function,  y(t) = sin(?t/2) + sin(t) appears
+%   to be about 44.  Mathematically, this assertion is rejected.  Sin(?t/2)
+%   has a period of 4, while sin(t) has a period of 2?.  Since pi is
+%   irrational, there exists no common multiple of both 2? and 4, and the
+%   signal is thus aperiodic. 
 
 
 %% Functions Used:
@@ -103,3 +113,5 @@ type f_phase;
 type u;
 
 type r;
+
+close all;
