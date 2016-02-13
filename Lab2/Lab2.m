@@ -72,3 +72,12 @@ type my_idft;
 
 
 %% Lab Exercise
+% I am unsure as to how to answer the question, as I do not believe there
+% was a 'warm-up' section with a 150 Hz sinusoid per the question
+% description. 
+% In essence, Spectral Leakage refers to the phenomena of additional
+% frequency components within the frequency spectrum of the provided
+% signal. These additional components manifest in varying ways, including
+% ailiasing as well as signal noise, which may occur as a result of
+% sampling and windowing respectively. Generally, the spectral leakage
+% blurs the original signal, including the manifestation of sidelobes.
