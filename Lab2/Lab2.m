@@ -24,6 +24,7 @@ xt = A*cos(2*pi*f0*tx+phi);
 
 figure(1);
 plot(tx, xt, tn, x);
+grid on;
 legend('Original Signal','Sampled Signal');
 
 % Discussion:
