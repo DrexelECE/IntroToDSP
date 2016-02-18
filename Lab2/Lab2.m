@@ -9,7 +9,7 @@ f0 = 100;
 phi = pi/4;
 fs = 400;
 t = 1;
-% t = 1/f0; % used to more closely examine one period. 
+t = 1/f0; % used to more closely examine one period. 
 
 Ts = 1/fs;
 N = t*fs;
@@ -73,12 +73,34 @@ type my_idft;
 
 
 %% Lab Exercise
-% I am unsure as to how to answer the question, as I do not believe there
-% was a 'warm-up' section with a 150 Hz sinusoid per the question
-% description. 
-% In essence, Spectral Leakage refers to the phenomena of additional
-% frequency components within the frequency spectrum of the provided
-% signal. These additional components manifest in varying ways, including
-% ailiasing as well as signal noise, which may occur as a result of
-% sampling and windowing respectively. Generally, the spectral leakage
-% blurs the original signal, including the manifestation of sidelobes.
+% It is not entirely clear what is intended with this question, as there
+% exists no 150Hz sinusoid in this assignment.  I'm assuming the question
+% is referring to the 100Hz sinusoid at the beginning of the assignment.  
+%
+% In that signal, although the sampling rate was above the Nyquist rate,
+% the sampled points aligned with the input signal such that the samples
+% only ever captured about 70% of the signal amplitude, and did so with a
+% vaveform that resembles clipping.  This creates spectral leakage by
+% blending the attributes of a normal sine wave, the signal, with some of
+% the spectral attributes of a square wave, which is, in this case, noise.
+% Although a fourier transform of the original signal should render a pure
+% singal of the original frequency, a fourier transform of the sampled
+% signal would also show other, higher frequencies that attempt to
+% reconstruct the flattened peaks of the sampled signal. 
+%
+% Since, however, most of the frequencies created by this noise should be
+% higher than half the sampling rate, those portions of the signal can be
+% immediately discarded.  Also, if full reconstruction of the original
+% signal is vital (which, may or may not actually be the case, depending on
+% the application), it may be possible to use a non-liner regression to
+% connect the points.  That is, it may be possible to align sinusoids to
+% the sampled points, rather than simply drawing lines between the points.
+% 
+% Something like this is accomplished when a sampled signal is sent into a
+% speaker which has a driver of noteworthy mass.  Since the driver has 
+% mass, and thus has inertia, as the signal approaches each peak, the 
+% driver will continue through and beyond the physcical point correlating 
+% to the sample point, before rebounding back toward the next sample point.  
+% While this is very unlikely to recreate the full sinusoid shape, it would
+% provide an audio signal more 'rounded' than a plot of the sampled signal.
+% 
