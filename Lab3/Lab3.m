@@ -15,9 +15,9 @@ legend('[697]','[770]','[852]','[941]','[1209]','[1336]','[1477]','[1633]')
 hold on;
 hold off; 
 
-    %Explanation: 
-    %In this case, the FIR filter length is not large enough, as it may be
-    %observed in Figure (1) that the numerous passbands overlap each other. 
+% Explanation: 
+% In this case, the FIR filter length is not large enough, as it may be
+% observed in Figure (1) that the numerous passbands overlap each other. 
 
 % FIR Bandpass Length of 80 
 hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633], 80, 8000);
@@ -31,14 +31,14 @@ legend('[697]','[770]','[852]','[941]','[1209]','[1336]','[1477]','[1633]')
 hold on;
 hold off;
 
-    %Explanation:
-    %As observed through Figure (2), with an FIR filter length of 80, the
-    %passbands seemingly have no overlap for the frequencies above 852 Hz.
-    %The lower frequency bands are extremely constricted (i.e., 697 Hz, 770
-    %Hz, 852 Hz). Therefore, a filter length slightly larger than 80 may be
-    %preferred; however, the length of 80 is seemingly sufficient.
+% Explanation:
+% As observed through Figure (2), with an FIR filter length of 80, the
+% passbands seemingly have no overlap for the frequencies above 852 Hz.
+% The lower frequency bands are extremely constricted (i.e., 697 Hz, 770
+% Hz, 852 Hz). Therefore, a filter length slightly larger than 80 may be
+% preferred; however, the length of 80 is seemingly sufficient.
     
-    type dtmfdesign.m
+type dtmfdesign.m
 
 %% Section 4.2: dtmfscore.m Application 
 
