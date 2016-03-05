@@ -1,4 +1,4 @@
-%% Lab 2
+%% Lab 3
 %  As evaluated by James Kerr and James Kurtz
 
 %% Section 4.1: dtmfdesign.m Application of FIR Filter Lengths 40 & 80
