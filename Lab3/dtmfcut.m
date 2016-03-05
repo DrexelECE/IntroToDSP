@@ -12,7 +12,7 @@ iv = diff(iv > setpoint);
 
 jkl = find(iv ~= 0)';
 
-%iv(jkl);
+%xx(jkl);
 if iv(jkl(1)) < 0, jkl = [1; jkl];  end
 if iv(jkl(end)) > 0, jkl = [jkl; Lx]; end
 

@@ -2,10 +2,10 @@ function iv = dtmfdial(keyNames,fs)
 %DTMFDIAL Create a signal vector of tones which will dial
 % a DTMF (Touch Tone) telephone system.
 %
-% usage: xx = dtmfdial(keyNames,fs)
+% usage: iv = dtmfdial(keyNames,fs)
 %  keyNames = vector of characters containing valid key names
 %        fs = sampling frequency
-%        xx = signal vector that is the concatenation of DTMF tones.
+%        iv = signal vector that is the concatenation of DTMF tones.
 
 dtmf.keys = ... 
    ['1','2','3','A';
