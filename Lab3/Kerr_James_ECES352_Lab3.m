@@ -3,7 +3,7 @@
 %% Section 4.1: dtmfdesign.m Application of FIR Filter Lengths 40 & 80
 
 % FIR Bandpass Length of 40 
-hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633], 40, 8000)
+hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633], 40, 8000);
 
 figure (1)
 plot(repmat(linspace(0,pi,40)',[1,8]),hh,'o-')
@@ -19,7 +19,7 @@ hold off;
     %observed in Figure (1) that the numerous passbands overlap each other. 
 
 % FIR Bandpass Length of 80 
-hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633],80,8000)
+hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633],80,8000);
 
 figure (2) 
 plot(repmat(linspace(0,pi,80)',[1,8]),hh,'o-')
@@ -36,14 +36,19 @@ hold off;
     %The lower frequency bands are extremely constricted (i.e., 697 Hz, 770
     %Hz, 852 Hz). Therefore, a filter length slightly larger than 80 may be
     %preferred; however, the length of 80 is seemingly sufficient.
+    
+    type dtmfdesign.m
 
 %% Section 4.2: dtmfscore.m Application 
 
-%sc = dtmfscore(iv,hh);
+type dtmfscore.m
+type dtmfcut.m
+
 
 %% Section 4.3: dtmfrun.m Application 
 
-%keys = dtmfrun(iv,L,fs);
+type dtmfdial.m
+type dtmfrun.m
 
 %% Section 4.4: dtmfdial.m Test
 
@@ -54,8 +59,8 @@ soundsc(iv,fs)
 L = 80; 
 dtmfrun(iv,L,fs);
 
-
-%s = spectrogram(iv)
+figure (3)
+spectrogram(iv)
 
 
 
