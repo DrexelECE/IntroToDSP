@@ -1,11 +1,12 @@
-%%HW3 
+%% Lab 2
+%  As evaluated by James Kerr and James Kurtz
 
 %% Section 4.1: dtmfdesign.m Application of FIR Filter Lengths 40 & 80
 
 % FIR Bandpass Length of 40 
 hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633], 40, 8000);
 
-figure (1)
+figure(1)
 plot(repmat(linspace(0,pi,40)',[1,8]),hh,'o-')
 xlabel('Frequency (Hz)')
 ylabel('Magnitude (Frequency Response)')
@@ -19,9 +20,9 @@ hold off;
     %observed in Figure (1) that the numerous passbands overlap each other. 
 
 % FIR Bandpass Length of 80 
-hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633],80,8000);
+hh = dtmfdesign([697,770,852,941,1209,1336,1477,1633], 80, 8000);
 
-figure (2) 
+figure(2) 
 plot(repmat(linspace(0,pi,80)',[1,8]),hh,'o-')
 xlabel('Frequency (Hz)')
 ylabel('Magnitude (Frequency Response)')
@@ -50,6 +51,7 @@ type dtmfcut.m
 type dtmfdial.m
 type dtmfrun.m
 
+
 %% Section 4.4: dtmfdial.m Test
 
 fs = 8000;
@@ -59,9 +61,6 @@ soundsc(iv,fs)
 L = 80; 
 dtmfrun(iv,L,fs);
 
-figure (3)
+figure(3)
 spectrogram(iv)
-
-
-
 
